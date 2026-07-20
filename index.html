@@ -1,186 +1,187 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Phoenix International School — Vadodara</title>
-<style>
-    :root{
-      --nav:#002147;
-      --accent:#ffb400;
-      --muted:#f3f6f9;
-      --card-shadow: 0 6px 20px rgba(2,27,60,0.08);
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;color:#1f2937;background:var(--muted);line-height:1.5}
-    a{color:inherit}
-    header{
-      background:var(--nav); BACKGROUND-COLOR:E1D9D1; color:BLACK; padding:18px 28px;display:flex;align-items:center; justify-content:space-between;
-    }
-    header .brand{display:flex; gap:14px; align-items:CENTER}
-    header h1{margin:0;font-size:18px;letter-spacing:0.6px}
-    nav a{color:BLACK;text-decoration:none;margin-left:16px;font-weight:600}
-    .hero{
-      height:380px;
-      background-image: url("https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1600&q=60");
-      background-size:cover;background-position:center;
-      display:flex;align-items:center;justify-content:center;color:blue;text-align:center;padding:24px;
-    }
-    .hero .wrap{max-width:1000px}
-    .hero h2{font-size:36px;margin:0 0 8px;text-shadow:0 6px 20px rgba(0,0,0,0.45)}
-    .hero p{margin:0;font-size:16px;text-shadow:0 4px 12px rgba(0,0,0,0.35)}
-    main{max-width:1100px;margin:-50px auto 80px;padding:0 20px}
-    .panel{
-      background: #e8f1ff;border-radius:12px;padding:26px;box-shadow:var(--card-shadow);margin-bottom:24px;
-    }
-    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
-    @media(max-width:980px){ .grid{grid-template-columns:1fr}} .hero{height:340px} }
-    h2.section{margin-top:0;color:var(--nav);font-size:22px}
-    .about p{margin:10px 0 0}
-    .info-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
-    .info-item{display:flex;gap:8px;align-items:flex-start}
-    .info-item b{min-width:110px;display:inline-block}
-    .docs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
-    .doc{background:#FFFFE0;border-radius:8px;padding:12px;border:1px solid #eef2f7}
-    .doc a{display:block;font-weight:700;text-decoration:none;color:var(--nav);margin-bottom:6px}
-    .doc small{color:#556170}
-    .contact-card{position:sticky;top:20px}
-    .card-cta{display:flex;flex-direction:column;gap:8px;margin-top:10px}
-    .btn{display:inline-block;background:#FFFFE0;color:#115DA9;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;transition:0.2s}
-    .btn:hover{background:#ffb400}
-    .btn-outline{BACKGROUND:#FFE082;padding:8px 16px;border-radius:8px;text-decoration:none;font-weight:600;transition:0.2s}
-    .btn-outline:hover{background:;color:BLACK}
-    footer{padding:20px;text-align:center;color:#9aa4b2;font-size:14px}
-    .small-note{font-size:13px;color:#6b7280;margin-top:10px}
-    .quick-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .quick-links a{background:#FFFFE0;padding:8px 10px;border-radius:8px;border:1px solid #eef2f7;text-decoration:none;color:#1f2937}
-    .brand-logo{width:48px;height:48px;border-radius:8px;background:white;display:flex;align-items:center;justify-content:center;color:var(--nav);font-weight:800;font-size:18px;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Guardian</title>
+    
+    <!-- Link to the official app configuration -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#dc3545">
+
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f2f5; padding: 20px; text-align: center; }
+        .card { background: white; max-width: 400px; margin: 30px auto; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .hidden { display: none; }
+        input { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { width: 95%; padding: 12px; margin: 10px 0; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .btn-login { background: #007bff; color: white; }
+        .btn-sos { background: #dc3545; color: white; font-size: 20px; padding: 20px; }
+        .btn-feature { background: #6c757d; color: white; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-back { background: #e0e0e0; color: #333; margin-top: 15px; }
+        .contact-box { background-color: #f8f9fa; border-left: 5px solid #28a745; padding: 15px; margin-top: 20px; border-radius: 5px; text-align: left; }
+        .contact-box a { color: #dc3545; font-weight: bold; text-decoration: none; }
+    </style>
 </head>
 <body>
 
-  <header>
-  <div class="brand">
-  <img src="phoenix-edu-logo.png" class="brand-logo" >
-  <div>
- <h1><span style="color: red">P</span>hoeni<span style="color: red">x</span> International School</h1>
-       <div style="font-size:15px;color:BLACK ;margin-top:2px">Atladara, Vadodara — CBSE Affiliated</div>
-      </div>
- </div>
- </div>
-  <nav aria-label="Main navigation">        
-      <a href="Bhavya PHOENIX INTERNATIONAL SCHOOL\bhavyaaaaaa\BHAVYA PHOENIXINTERNATIONAL SCHOOL\bbbj.html#about">ABOUT</a>
-      <a href="Bhavya PHOENIX INTERNATIONAL SCHOOL\bhavyaaaaaa\BHAVYA PHOENIXINTERNATIONAL SCHOOL\bbbj.html#documents">DOCUMENTS</a>
-      <a href="Bhavya PHOENIX INTERNATIONAL SCHOOL\bhavyaaaaaa\BHAVYA PHOENIXINTERNATIONAL SCHOOL\bbbj.html#admissions">ADMISSIONS</a>
-      <a href="Bhavya PHOENIX INTERNATIONAL SCHOOL\bhavyaaaaaa\BHAVYA PHOENIXINTERNATIONAL SCHOOL\bbbj.html#contact">CONTACT</a>
-    </nav>
-  </header>
-
-  <section class="hero" aria-hidden="false">
-    <div class="wrap">
-      <h2 style="color:yellow">Phoenix International School — Igniting minds, shaping futures</h2>
-      <p style="color:green">Quality CBSE education | Modern classrooms | Focus on holistic development</p>
+    <!-- 🔐 LOGIN PAGE -->
+    <div id="loginPage" class="card">
+        <h2>AI Guardian Login</h2>
+        <input type="email" id="email" placeholder="Enter Email" value="user@safety.com">
+        <input type="password" id="password" placeholder="Enter Password" value="123456">
+        <button class="btn-login" onclick="showHome()">Login</button>
     </div>
-  </section>
 
-  <main>
-    <div class="grid">
-      <div>
-        <!-- About -->
-        <section class="panel about" id="about">
-          <h2 class="section">About the School</h2>
-          <p>
-            Phoenix International School is managed by Prince Education &amp; Charitable Trust and provides
-            modern infrastructure, academic programs and co-curricular activities for a rounded education.
-            Below are official details published by the school (CBSE disclosures, calendar and other documents).
-          </p>
-
-          <div class="info-list" role="list">
-            <div class="info-item"><b>Address:</b> Opp. Sairang Height, Near United Way Garba Ground, Atladara, Vadodara, Gujarat — 390012</div>
-            <div class="info-item"><b>Principal:</b> Darpana Patil, M.Sc., B.Ed.</div>
-            <div class="info-item"><b>School Email:</b> <a href="mailto:cbsephoenixinternationalschool@gmail.com">cbsephoenixinternationalschool@gmail.com</a></div>
-            <div class="info-item"><b>Affiliation No:</b> 430623</div>
-          </div>
-
-          <div style="margin-top:18px">
-            <h3 style="margin:0 0 8px;font-size:16px;color:#0f172a;background-color:">Quick links</h3>
-            <div class="quick-links">
-              <a href="https://phoenixinternationalschool.in/cbse/DocumentsAndInformation/MandatoryDisclosure.pdf" target="_blank" rel="noopener">Mandatory Disclosure (PDF)</a>
-              <a href="https://phoenixinternationalschool.in/cbse/ResultAndAcademics/Calendar.pdf" target="_blank" rel="noopener">Academic Calendar (PDF)</a>
-              <a href="https://phoenixinternationalschool.in/cbse/ResultAndAcademics/Fees.pdf" target="_blank" rel="noopener">Fee Structure (PDF)</a>
-              <a href="https://phoenixinternationalschool.in/cbse/DocumentsAndInformation/PermissionLetter.pdf" target="_blank" rel="noopener">Permission Letter (PDF)</a>
-            </div>
-          </div>
-        </section>
-
-        <!-- Documents -->
-        <section class="panel" id="documents" aria-labelledby="documents-heading">
-          <h2 id="documents-heading" class="section">Official Documents</h2>
-
-          <div class="docs">
-            <div class="doc">
-              <a href="https://phoenixinternationalschool.in/cbse/DocumentsAndInformation/MandatoryDisclosure.pdf" target="_blank" rel="noopener">Mandatory Disclosure</a>
-              <small>Public CBSE disclosure — affiliation, details, infrastructure (PDF)</small>
-            </div>
-
-            <div class="doc">
-              <a href="https://phoenixinternationalschool.in/cbse/ResultAndAcademics/Calendar.pdf" target="_blank" rel="noopener">Academic Calendar</a>
-              <small>Tentative academic calendar for the year (PDF)</small>
-            </div>
-
-            <div class="doc">
-              <a href="https://phoenixinternationalschool.in/cbse/ResultAndAcademics/Fees.pdf" target="_blank" rel="noopener">Fee Structure</a>
-              <small>Proposed fee structure PDF</small>
-            </div>
-
-            <div class="doc">
-              <a href="https://phoenixinternationalschool.in/cbse/DocumentsAndInformation/PermissionLetter.pdf" target="_blank" rel="noopener">Permission / Approval Letter</a>
-              <small>CBSE permission / approval related document (PDF)</small>
-            </div>
-          </div>
-
-          <p class="small-note">The documents above are hosted on the school's official domain and open in a new tab. If you want copies embedded on this page instead, I can add inline PDF viewers or download-and-serve them locally.</p>
-        </section>
-
-        <!-- Admissions -->
-        <section class="panel" id="admissions">
-          <h2 class="section">Admissions &amp; Enquiries</h2>
-          <p>Admissions information and forms are available via the school's official channels. For admission queries, please contact the school email or phone numbers listed below.</p>
-
-          <div style="margin-top:14px">
-            <a class="btn" href="mailto:cbsephoenixinternationalschool@gmail.com">Email Admissions</a>
-            <a class="btn-outline" href="file:///C:/Users/Lenovo/Downloads/bbbj.html#contact">Contact Details</a>
-          </div>
-        </section>
-
-      </div>
-
-      <aside>
-        <div class="panel contact-card">
-          <h2 class="section">Contact</h2>
-          <div style="font-size:15px;color:#0b1220">
-            <div style="margin-bottom:8px"><strong>Address</strong><div style="font-weight:600;margin-top:6px">Opp. Sairang Height, Near United Way Garba Ground, Atladara, Vadodara — 390012</div></div>
-
-            <div style="margin-top:10px"><strong>Email</strong>
-              <div style="margin-top:6px"><a href="mailto:cbsephoenixinternationalschool@gmail.com">cbsephoenixinternationalschool@gmail.com</a></div>
-            </div>
-
-            <div style="margin-top:10px"><strong>Managed By</strong>
-              <div style="margin-top:6px">Prince Education &amp; Charitable Trust</div>
+    <!-- 🏠 HOME PAGE -->
+    <div id="homePage" class="card hidden">
+        <h2>AI Guardian Dashboard</h2>
+        
+        <!-- 🚨 Functional SOS Button -->
+        <button class="btn-sos" onclick="triggerSOS()">🚨 Trigger SOS</button>
+        
+        <!-- 📍 Functional Location Share -->
+        <button class="btn-feature" onclick="shareLocation()">📍 Share Location</button>
+        
+        <!-- 👨‍👩‍👧 Emergency Contacts Toggle -->
+        <button class="btn-feature" onclick="showContacts()">👨‍👩‍👧 Emergency Contacts</button>
+        
+        <br><br>
+        <a href="#" onclick="showLogin()">Logout</a>
     </div>
-  <div style="margin-top:12px">
-  <strong>Important</strong>
-  <div style="margin-top:6px;color:#6b7280">This static page links to official PDFs hosted on the school's domain. Replacing the live site with this file will change what visitors see; keep backups of any existing content before replacing files on the server.</div>
-            </div>
-  </div>
 
-  <div style="margin-top:14px">
-  <a class="btn" href="https://phoenixinternationalschool.in/cbse/DocumentsAndInformation/MandatoryDisclosure.pdf" target="_blank" rel="noopener">View Mandatory Disclosure</a>
-  </div>
-  </div>
-  </aside>
-  </div>
-  </main>
-<footer>
-   <MARQUEE> © 2025 Phoenix International School — Atladara, Vadodara. This page is a recreated static version that links to the school's public CBSE documents. For an exact copy of the original site's server-side code, access to the web host or CMS is required. </MARQUEE>
-  </footer>
+    <!-- 👨‍👩‍👧 EMERGENCY CONTACTS PAGE -->
+    <div id="contactsPage" class="card hidden">
+        <h2>Manage Contacts</h2>
+        <p>Save a trusted person's number below:</p>
+        
+        <input type="text" id="contactName" placeholder="Contact Name">
+        <input type="tel" id="contactPhone" placeholder="Phone Number">
+        <button class="btn-success" onclick="saveContact()">💾 Save Contact</button>
+        
+        <!-- Display area for the saved contact -->
+        <div id="savedContactDisplay" class="contact-box hidden"></div>
+        
+        <button class="btn-back" onclick="showHomeFromContacts()">⬅️ Back to Dashboard</button>
+    </div>
+
+    <script>
+        // 🚀 Register the Service Worker to make it an installable app
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+
+        // Run this immediately when the script loads to check for any existing saved contact
+        loadSavedContact();
+
+        function showHome() {
+            document.getElementById('loginPage').classList.add('hidden');
+            document.getElementById('homePage').classList.remove('hidden');
+            document.getElementById('contactsPage').classList.add('hidden');
+        }
+        
+        function showLogin() {
+            document.getElementById('homePage').classList.add('hidden');
+            document.getElementById('loginPage').classList.remove('hidden');
+            document.getElementById('contactsPage').classList.add('hidden');
+        }
+
+        function showContacts() {
+            document.getElementById('homePage').classList.add('hidden');
+            document.getElementById('contactsPage').classList.remove('hidden');
+        }
+
+        function showHomeFromContacts() {
+            document.getElementById('contactsPage').classList.add('hidden');
+            document.getElementById('homePage').classList.remove('hidden');
+        }
+
+        // Save contact locally in the browser
+        function saveContact() {
+            const nameInput = document.getElementById('contactName');
+            const phoneInput = document.getElementById('contactPhone');
+            
+            const name = nameInput.value.trim();
+            const phone = phoneInput.value.trim();
+
+            if (name === '' || phone === '') {
+                alert('Please enter both a name and a phone number.');
+                return;
+            }
+
+            // Store details in localStorage so it persists on page refreshes
+            localStorage.setItem('emergencyName', name);
+            localStorage.setItem('emergencyPhone', phone);
+
+            // Update UI view
+            displayContactHTML(name, phone);
+
+            // Reset inputs
+            nameInput.value = '';
+            phoneInput.value = '';
+            
+            alert('Contact saved successfully!');
+        }
+
+        // Pull saved contact from memory and update interface
+        function loadSavedContact() {
+            const savedName = localStorage.getItem('emergencyName');
+            const savedPhone = localStorage.getItem('emergencyPhone');
+
+            if (savedName && savedPhone) {
+                displayContactHTML(savedName, savedPhone);
+            }
+        }
+
+        // Utility helper to inject display block styling
+        function displayContactHTML(name, phone) {
+            const displayBox = document.getElementById('savedContactDisplay');
+            displayBox.innerHTML = `
+                <strong>Trusted Contact Saved:</strong><br><br>
+                👤 Name: ${name}<br>
+                📞 Call: <a href="tel:${phone}">${phone}</a>
+            `;
+            displayBox.classList.remove('hidden');
+        }
+
+        // 🚨 Activating the SOS feature to make a real emergency phone call
+        function triggerSOS() {
+            // Check if user has a custom trusted contact saved
+            const savedPhone = localStorage.getItem('emergencyPhone');
+            const targetNumber = savedPhone ? savedPhone : "112";
+            const targetName = savedPhone ? localStorage.getItem('emergencyName') : "emergency services (112)";
+
+            if (confirm(`Do you want to emergency call ${targetName} right now?`)) {
+                window.location.href = `tel:${targetNumber}`; 
+            }
+        }
+
+        // 📍 Activating the Real Location Share Feature
+        function shareLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    let lat = position.coords.latitude;
+                    let lon = position.coords.longitude;
+                    // Generates a real google maps link with your exact live location
+                    let mapsUrl = `https://google.com{lat},${lon}`;
+                    
+                    if (navigator.share) {
+                        navigator.share({
+                            title: 'AI Guardian Emergency Location',
+                            text: 'I need help! Here is my live location:',
+                            url: mapsUrl
+                        });
+                    } else {
+                        alert(`Your Location:\nLatitude: ${lat}\nLongitude: ${lon}\n\nLink: ${mapsUrl}`);
+                    }
+                }, function() {
+                    alert("Unable to retrieve location. Please check GPS settings.");
+                });
+            } else {
+                alert("Geolocation is not supported by your browser.");
+            }
+        }
+    </script>
 </body>
 </html>
